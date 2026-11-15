@@ -1,119 +1,175 @@
-body {
-    background-color: black;
-    font-family: 'helvetica';
-    color: seashell;
-    font-size: 22px;
-
-}
-a {
-    text-decoration: underline;
-    content: pointer;
-    color: seashell;
-}
-/* 1. Style the main header container */
-.header-bar {
-  display: flex;
-  justify-content: space-between; /* Pushes logo left, nav-links right */
-  align-items: center;            /* Vertically aligns them in the center */
-  padding: 10px 20px;             /* Gives the header some breathing room */
-  border-bottom: 1px solid seashell; /* Adds a subtle line under the header */
-  height: 69px;                   /* Sets a fixed height for the header */
+html {
+    font-size: 16px;
 }
 
-/* 2. Style the navigation container to make the links sit horizontally */
-.nav-links {
-  display: flex;
-  gap: 20px;                      /* Puts a clean space between each link */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 10rem;
+    text-align: center;
+    color: #fff;
 }
-.logo img{
-    height: 50px;
-    align-items: center;
+
+p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0 0 1em 0;
+    font-size: 2.1rem;
+    text-align: center;
+    color:#fff;
 }
-.mission {
-    background-image: url("../images/img-mission-background.jpg");
-    background-size: cover; /* Ensures the image covers the entire div */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    height: 700px;
+
+.logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.navbar {
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: fixed;
+    height: 80px;
     width: 100%;
+    background-color: #333;
+    color: #fff;
     display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center;     /* Centers content vertically */
-}
-.mission-banner {
-    background-color: black; /* Semi-transparent background for readability */
-    color: seashell;
-    width: 100%; /* Makes the banner span the full width of the mission section */
-    text-align: center;
-}
-.tea-selection {
-    color: seashell;
-    text-align: center;
-    margin: 40px 0 40px 0;
-}
-.tea-grid {
-  display: flex;
-  flex-wrap: wrap;        /* Allows items to drop to the next row */
-  justify-content: center; /* Centers the leftover items on the bottom row! */
-  gap: 40px;              /* Controls spacing between the boxes */
-  max-width: 1000px;      /* Keeps the container from getting too wide */
-  margin: 0 auto;         /* Centers the whole grid on the webpage */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
-.tea-item {
-  width: 300px;           /* Gives items an explicit width */
-  text-align: center;
+.navbar ul {
+    list-style-type: none;
+    margin: 0.5rem;
+    padding: 1rem;
+    display: flex;
 }
 
-.tea-item img {
-  width: 100%;            /* Forces images to fill their 300px boxes */
-  height: 200px;          /* Matches the project design height specifications */
-  object-fit: cover;      /* Prevents images from stretching weirdly */
+.navbar li {
+    margin: 0 1rem;
+    font-size: 1.2rem;
 }
-.locations {
-    background-image: url("../images/img-locations-background.jpg");
-    background-size: cover; /* Ensures the image covers the entire div */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    height: 500px;
-    width: 100%;
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    margin: 80px auto 0; /* 80px top margin clears navbar; auto centers the container */
+    max-width: 1100px; /* Prevents the two halves from drifting too far apart on wide screens */
+    min-height: 55vh; /* Much tighter vertical height than 85vh */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    gap: 2.5rem;
+}
+
+.hero-left,
+.hero-right {
+    flex: 1; /* Gives each side 50% of the available space */
+}
+
+.hero-left {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-left img {
+    max-width: 100%;
+    max-height: 400px; /* Keeps the logo from getting too tall */
+    height: auto;
+}
+
+.hero-right {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center;     /* Centers content vertically */
-}
-.locations h2 {
-    color: seashell;
-    margin-bottom: 40px;
-}
-.location-grid {
-    display: flex;
-    justify-content: center; /* Centers the leftover items on the bottom row! */
-    gap: 40px;              /* Controls spacing between the boxes */
-    max-width: 1000px;      /* Keeps the container from getting too wide */
-}
-.location-item {
-    padding: 10px;
-    width: 300px;           /* Gives items an explicit width */
-    line-height: 50px;
-    text-align: center;
-    background-color: black; /* Adds a background color for better readability */
-}
-.site-footer {
-  display: flex;
-  flex-direction: column;   /* Stacks the contact block above the copyright */
-  align-items: center;      /* Centers contack block and left justifies copyright block */
-  justify-content: center;  /* Centers them vertically if the footer has a set height */
-  gap: 40px;                /* Controls the perfect distance between contact and copyright */
-  padding: 60px 0;          /* Gives the footer deep breathing room at the bottom of the page */
-  height: 200px;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
-.contact {
-  text-align: center;       /* Centers the individual lines of text inside the block */
-  line-height: 2;           /* Reuses your clean line-height trick for perfect spacing */
+.hero-right blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #222;
 }
-.copyright {
-    align-self: flex-start;
-    margin-left: 10px;
+
+.hero-right cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: bold;
+    color: #555;
+}
+
+.tagline {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.content-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    scroll-margin-top: 80px; /* Prevents fixed navbar from covering the heading on anchor click */
+}
+
+.content-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    color: #222;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap onto a new line on smaller screens */
+    justify-content: center;
+    gap: 2rem;
+}
+
+.verse-card {
+    flex: 1 1 300px; /* Grow, shrink, and start at a 300px base width */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-top: 4px solid #333; /* Subtle accent bar matching your navbar */
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.verse-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.verse-card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #444;
+    font-style: italic;
 }
