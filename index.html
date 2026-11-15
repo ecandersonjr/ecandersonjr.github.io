@@ -1,121 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Damion" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="./resources/css/reset.css">
-  <link rel="stylesheet" href="./resources/css/style.css">
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beacon of Hope</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/styles.css">
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <div class="content">
-      <a href="index.html" class="desktop logo">Fotomatic</a>
-      <nav class="desktop">
-        <ul>
-          <li><a href="#">Product detail</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="https://www.instagram.com/">Follow us <img class="icon" src="./resources/images/instagram.png"></a></li>
-        </ul>
-      </nav>
-      <nav class="mobile">
-        <ul>
-          <li><a href="#"><img src="./resources/images/ic-logo.svg"></a></li>
-          <li><a href="#"><img src="./resources/images/ic-product-detail.svg"></a></li>
-          <li><a href="#"><img src="./resources/images/ic-about-us.svg"></a></li>
-          <li><a href="#" class="button">Join us</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar">
+      <div class="logo">Beacon of Hope</div>
+      <ul class="nav-links">
+        <li><a href="#gods-love">God's Love</a></li>
+        <li><a href="#saved-by-grace">Saved by Grace</a></li>
+        <li><a href="#testimony">My Testimony</a></li>
+        <li><a href="#find-church">Find a Church</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Main Content -->
-  <div class="main-content">
+  <main>
+    <!-- Hero / Welcome Banner -->
+    <section class="hero">
+        <div class="hero-left">
+            <img src="./resources/images/Beacon-of-Hope-Logo.png" alt="Beacon of Hope Ministry Logo">
+        </div>
+  
+        <div class="hero-right">
+            <blockquote>
+                "Again Jesus spoke to them, saying, 'I am the light of the world. Whoever follows me will not walk in darkness, but will have the light of life.'"
+                <cite>— John 8:12</cite>
+            </blockquote>
+            <p class="tagline">Lighting the way to the saving grace of Jesus Christ</p>
+        </div>
+    </section>
 
-    <!-- Sign Up Section -->
-    <div id="sign-up-section" class="banner">
-      <div id="sign-up-cta">
-        <div class="content center">
-          <div class="header">
-            <h2 class="cursive">Instant</h2>
-            <h1 class="striking">FORMAT CAMERA</h1>
-          </div>
-          <div class="email">
-            <span>
-              Email us to request a demo and be in our waiting list for the <strong>Febuary 2017</strong> release!
-            </span>
-            <div class="button">Join the waiting list</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Section 1: God's Love -->
+    <section id="gods-love" class="content-section">
+        <h2>Understanding God's Love</h2>
+        <p class="section-intro">Scripture shows us that God's love is unconditional, sacrificial, and the very core of who He is.</p>
+  
+        <div class="card-container">
+            <article class="verse-card">
+                <h3>John 3:16</h3>
+                <p>"For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life."</p>
+            </article>
 
-    <!-- Features Section -->
-    <div id="features-section">
-      <div class="feature">
-        <div class="center">
-          <div class="image-container">
-            <img src="./resources/images/feature-1.png" />
-          </div>
-          <div class="content">
-            <h2>Advanced, automatic, instant</h2>
-            <h3>Shutter speed, apperture and flash output adjust automatically</h3>
-          </div>
-        </div>
-      </div>
-      <div class="feature">
-        <div class="center">
-          <div class="image-container">
-            <img src="./resources/images/feature-2.png" />
-          </div>
-          <div class="content">
-            <h2>Beautifully crafted inside-out</h2>
-            <h3>From the paint outside to the tiny screw inside, Fotomatic is crafted with love and 20-year of expertise</h3>
-          </div>
-        </div>
-      </div>
-    </div>
+            <article class="verse-card">
+                <h3>Romans 5:8</h3>
+                <p>"But God shows his love for us in that while we were still sinners, Christ died for us."</p>
+            </article>
 
-    <!-- Filters Section -->
-    <div id="filters-section">
-      <div class="content center">
-        <h2>Over 20+ filters to choose from</h2>
-        <h3>Feed your creativity with 20 different filter designed by our eclectic in-house photographers!</h3>
-      </div>
-      <div class="images-container">
-        <div class="image-container">
-          <img src="./resources/images/filter-1.png" />
+            <article class="verse-card">
+                <h3>1 John 4:8</h3>
+                <p>"Anyone who does not love does not know God, because God is love."</p>
+            </article>
         </div>
-        <div class="image-container">
-          <img src="./resources/images/filter-2.png" />
-        </div>
-        <div class="image-container">
-          <img src="./resources/images/filter-3.png" />
-        </div>
-        <div class="image-container extra">
-          <img src="./resources/images/filter-4.png" />
-        </div>
-      </div>
-    </div>
+    </section>
 
-    <!-- Quotes Section -->
-    <div id="quotes-section">
-      <div class="content center">
-        <span class="quote">“It’s truly something that could create a brand new photography Renaissance”</span>
-        <img class="quote-citation" src="./resources/images/photography-logo.png" />
+    <!-- Section 2: Saved by Grace -->
+    <section id="saved-by-grace" class="content-section">
+      <h2>How to Be Saved by Grace</h2>
+      <div class="split-layout">
+        <div class="text-box">Explanation of grace and faith...</div>
+        <div class="image-box">Image or Key Verse Callout</div>
       </div>
-    </div>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="content">
-        <span class="copyright">© 2016  Fotomatic, All Rights Reserved</span>
-        <span class="location">Designed in NYC</span>
+    <!-- Section 3: My Testimony -->
+    <section id="testimony" class="content-section">
+      <h2>My Testimony</h2>
+      <p>Your personal story goes here...</p>
+    </section>
+
+    <!-- Section 4: Finding a Home Church -->
+    <section id="find-church" class="content-section">
+      <h2>Finding a Home Church</h2>
+      <div class="card-container">
+        <div class="card">Step 1: What to look for</div>
+        <div class="card">Step 2: Local directories</div>
       </div>
-    </footer>
+    </section>
+  </main>
 
-  </div>
+  <footer>
+    <p>&copy; 2026 [Ministry Name]. All rights reserved.</p>
+  </footer>
 </body>
+
 </html>
