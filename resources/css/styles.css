@@ -1,23 +1,39 @@
 html {
-    font-size: 16px;
+    font-size: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;
+body {
+    background-color: #2C444C;
     margin: 0;
-    padding: 0;
-    font-size: 10rem;
-    text-align: center;
-    color: #fff;
-}
-
-p {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    margin: 0 0 1em 0;
-    font-size: 2.1rem;
-    text-align: center;
-    color:#fff;
+}
+
+h1 { 
+    font-size: clamp(2.25rem, 5vw, 3.5rem); 
+}
+
+h2 { 
+    font-size: clamp(1.75rem, 4vw, 2.5rem); 
+}
+
+h3 {
+     font-size: 1.4rem; 
+}
+
+p  { 
+    font-size: 1.125rem; 
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
 }
 
 .logo {
@@ -32,14 +48,15 @@ p {
     left: 0;
     z-index: 1000;
     position: fixed;
-    height: 80px;
+    height: 78px;
     width: 100%;
-    background-color: #333;
-    color: #fff;
+    background-color: #2C444C;
+    color: #F4E9D8;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    border-bottom: 2px solid #C29F63; /* Subtle border matching your color scheme */
 }
 
 .navbar ul {
@@ -55,8 +72,13 @@ p {
 }
 
 .navbar a {
-    color: #fff;
+    color: #F4E9D8;
     text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #C29F63; /* Subtle hover effect matching your color scheme */
+    border: 2px solid #C29F63; /* Subtle border on hover */
 }
 
 .hero {
@@ -97,7 +119,7 @@ p {
     font-size: 1.5rem;
     font-style: italic;
     line-height: 1.6;
-    color: #222;
+    color: #C29F63;
 }
 
 .hero-right cite {
@@ -106,14 +128,14 @@ p {
     font-size: 1.1rem;
     font-style: normal;
     font-weight: bold;
-    color: #555;
+    color: #FEF488;
 }
 
 .tagline {
     font-family: 'Oswald', sans-serif;
     font-size: 1.8rem;
     font-weight: bold;
-    color: #333;
+    color: #F4E9D8;
 }
 
 .content-section {
@@ -128,7 +150,7 @@ p {
     font-size: 2.2rem;
     text-align: center;
     margin-bottom: 0.75rem;
-    color: #222;
+    color: #F4E9D8;
 }
 
 .section-intro {
@@ -136,7 +158,7 @@ p {
     max-width: 650px;
     margin: 0 auto 2.5rem;
     font-size: 1.1rem;
-    color: #555;
+    color: #C29F63;
     line-height: 1.5;
 }
 
@@ -149,9 +171,9 @@ p {
 
 .verse-card {
     flex: 1 1 300px; /* Grow, shrink, and start at a 300px base width */
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-top: 4px solid #333; /* Subtle accent bar matching your navbar */
+    background-color: #2C444C; /* Dark background to match your color scheme */
+    border: 1px solid #C29F63; /* Subtle border matching your color scheme */
+    border-top: 4px solid #C29F63; /* Subtle accent bar matching your navbar */
     border-radius: 8px;
     padding: 2rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
@@ -163,13 +185,33 @@ p {
 .verse-card h3 {
     font-family: 'Oswald', sans-serif;
     font-size: 1.4rem;
-    color: #333;
+    color: #F4E9D8;
     margin-bottom: 1rem;
 }
 
 .verse-card p {
     font-size: 1.05rem;
     line-height: 1.6;
-    color: #444;
+    color: #C29F63;
     font-style: italic;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #C29F63;
+    margin: 1rem 0;
+}
+
+
+:root { --nav-h: 80px; }
+.navbar { height: var(--nav-h); }
+.hero { margin-top: var(--nav-h); }
+.content-section { scroll-margin-top: var(--nav-h); }
+
+@media (max-width: 768px) {
+  :root { --nav-h: 120px; }          /* tune after testing on a real phone */
+  .navbar { flex-direction: column; justify-content: center; }
+  .navbar ul { flex-wrap: wrap; justify-content: center; padding: 0; }
+  .hero { flex-direction: column; }  /* stack image above the verse */
 }
