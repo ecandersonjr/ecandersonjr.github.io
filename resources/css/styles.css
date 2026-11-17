@@ -224,7 +224,7 @@ p  {
 
 .testimony-right {
     flex: 3;
-    max-width: 1200px; /* Optional: limits the width of the text for better readability */
+    max-width: 900px; /* Optional: limits the width of the text for better readability */
     align-self: center; /* Centers the text vertically if the image is taller */
     align-items: center;
 }
