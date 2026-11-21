@@ -27,13 +27,17 @@ p  {
 
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: -100px;
     left: 0;
-    background: #000;
-    color: #fff;
+    background: #2C444C;
+    color: #FEF488;
     padding: 8px 16px;
     z-index: 1000;
     transition: top 0.3s ease-in-out;
+}
+
+.skip-link:focus {
+    top: 15px; /* Moves the link into view when focused */
 }
 
 .logo {
@@ -46,14 +50,14 @@ p  {
 .navbar {
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 900;
     position: fixed;
     height: 78px;
     width: 100%;
     background-color: #2C444C;
-    color: #F4E9D8;
+    color: #EFBF04;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
     border-bottom: 2px solid #FEF488; /* Subtle border matching your color scheme */
@@ -72,7 +76,7 @@ p  {
 }
 
 .navbar a {
-    color: #F4E9D8;
+    color: #EFBF04;
     text-decoration: none;
 }
 
@@ -81,43 +85,71 @@ p  {
     border: 2px solid #FEF488; /* Subtle border on hover */
 }
 
-.hero {
-    margin: 80px auto 0; /* 80px top margin clears navbar; auto centers the container */
-    max-width: 1100px; /* Prevents the two halves from drifting too far apart on wide screens */
-    min-height: 55vh; /* Much tighter vertical height than 85vh */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 2rem;
-    gap: 2.5rem;
+* {
+    box-sizing: border-box;
 }
 
-.hero-left,
-.hero-right {
-    flex: 1; /* Gives each side 50% of the available space */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.hero-top {
+    flex: 0 0 100%;
+    display: flex;            /* Turns the header into a horizontal flex row */
+    justify-content: center;  /* Centers the h1 and h2 horizontally */
+    align-items: baseline;    /* Aligns the bottom of the text nicely across different font sizes */
+    flex-wrap: wrap;          /* Lets h2 wrap cleanly onto a second line on narrow mobile screens */
+    text-align: center;       /* Centers the text for better mobile readability */
+    gap: 0.75rem;             /* Exact horizontal space after "Beacon of Hope:" */
+    margin-bottom: 1.5rem;
+}
+
+.hero-top h1, .hero-top h2 {
+    margin: 0; /* Removes default margins for better alignment */
+}
+
+.hero-top h1 {
+    margin: 0 0 0.5rem 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 5rem;
+    color: #EFBF04;
+}
+
+.hero-top h2 {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    color: #FEF488;
 }
 
 .hero-left {
-    display: flex;
-    justify-content: center;
+    flex: 0 0 25%;
+    margin: 0;
+    padding-right: 1.5rem; /* Acts as a safe gap without breaking flex-wrap */
 }
 
 .hero-left img {
-    max-width: 100%;
-    max-height: 400px; /* Keeps the logo from getting too tall */
-    height: auto;
+    width: 100%;
+    height: auto; /* Keeps the logo from getting too tall */
+    display: block;
     border-style: groove;
     border-color: #FEF488; /* Subtle border matching your color scheme */
 }
 
 .hero-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.5rem;
+    flex: 0 0 75%;
+}
+
+.hero-right h2 {
+    font-size: 2.25rem;
+    color: #FEF488;
+    margin-bottom: 1.5rem;
 }
 
 .hero-right blockquote {
+    margin: 0;
     font-size: 1.5rem;
     font-style: italic;
     line-height: 1.6;
@@ -126,18 +158,11 @@ p  {
 
 .hero-right cite {
     display: block;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     font-size: 1.1rem;
     font-style: normal;
     font-weight: bold;
     color: #FEF488;
-}
-
-.tagline {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #F4E9D8;
 }
 
 .content-section {
@@ -152,7 +177,7 @@ p  {
     font-size: 2.2rem;
     text-align: center;
     margin-bottom: 0.75rem;
-    color: #F4E9D8;
+    color: #EFBF04;
 }
 
 .section-intro {
@@ -187,7 +212,7 @@ p  {
 .verse-card h3 {
     font-family: 'Oswald', sans-serif;
     font-size: 1.4rem;
-    color: #F4E9D8;
+    color: #EFBF04;
     margin-bottom: 1rem;
 }
 
@@ -234,7 +259,7 @@ p  {
 .testimony-right h2 {
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
-    color: #F4E9D8;
+    color: #EFBF04;
     margin-bottom: 1rem;
     align-items: center; /* Centers the heading vertically */
 }
